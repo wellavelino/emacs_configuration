@@ -35,6 +35,7 @@
 (load "02packages-setup.el")
 (load "highlight-indent-guides.el")
 (load "yaml_mode.el")
+(load "python-setup.el")
 
 
 
