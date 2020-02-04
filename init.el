@@ -15,8 +15,7 @@
 
 ; list the packages you want
 (defvar package-list)
-(setq package-list '(json-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete markdown-mode))
-
+(setq package-list '(json-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete markdown-mode doom-themes doom-modeline))
 ; activate all the packages (in particular autoloads)
 (package-initialize)
 
