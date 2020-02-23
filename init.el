@@ -1,9 +1,4 @@
 ;; package -- Emacs Configuration
-;;;
-;;; Commentary:
-;;; this enables sevaral quirks for the elixir mode
-;;;
-;;; Code:
 
 (package-initialize)
 
@@ -15,7 +10,8 @@
 
 ; list the packages you want
 (defvar package-list)
-(setq package-list '(json-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete markdown-mode doom-themes doom-modeline))
+(setq package-list '(json-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete markdown-mode doom-themes doom-modeline use-package))
+
 ; activate all the packages (in particular autoloads)
 (package-initialize)
 
@@ -28,15 +24,20 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+(require 'package)
+(require 'use-package)
+
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "00common-setup.el")
 (load "01ruby-setup.el")
 (load "02packages-setup.el")
 (load "highlight-indent-guides.el")
 (load "yaml_mode.el")
-;;(load "python-setup.el")
+(load "python-setup.el")
 
 
+(setq python-shell-interpreter "ipython"
+       python-shell-interpreter-args "-i")
 
 (provide 'init)
 ;;; init.el ends here
@@ -50,7 +51,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (ansible json-mode markdown-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete)))
+    (elpy ansible json-mode markdown-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete use-package)))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil))
@@ -60,4 +61,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
