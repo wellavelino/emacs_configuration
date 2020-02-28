@@ -1,4 +1,4 @@
-;; package -- Emacs Configuration
+3;; package -- Emacs Configuration
 
 (package-initialize)
 
@@ -10,7 +10,28 @@
 
 ; list the packages you want
 (defvar package-list)
-(setq package-list '(json-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete markdown-mode doom-themes doom-modeline use-package))
+(setq package-list '(json-mode
+		   ruby-hash-syntax
+		   magit
+		   textmate
+		   smartparens
+		   ruby-tools
+		   rbenv
+		   rainbow-mode
+		   projectile
+		   multiple-cursors
+		   grizzl
+		   flycheck
+		   feature-mode
+		   enh-ruby-mode
+		   yard-mode
+		   rspec-mode
+		   auto-complete
+		   markdown-mode
+		   doom-themes
+		   doom-modeline
+		   swift-mode
+		   use-package))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -35,7 +56,9 @@
 (load "yaml_mode.el")
 (load "python-setup.el")
 
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
+;; Python interpreter
 (setq python-shell-interpreter "ipython"
        python-shell-interpreter-args "-i")
 
@@ -51,7 +74,28 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (elpy ansible json-mode markdown-mode magit textmate smartparens ruby-tools robe rbenv rainbow-mode projectile multiple-cursors grizzl flycheck feature-mode enh-ruby-mode auto-complete use-package)))
+    (elpy
+     ruby-hash-syntax
+     rspec-mode
+     ansible
+     json-mode
+     markdown-mode
+     magit
+     textmate
+     smartparens
+     ruby-tools
+     rbenv
+     rainbow-mode
+     projectile
+     multiple-cursors
+     grizzl
+     flycheck
+     feature-mode
+     yard-mode
+     enh-ruby-mode
+     swift-mode
+     auto-complete
+     use-package)))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil))

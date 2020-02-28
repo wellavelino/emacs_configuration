@@ -9,7 +9,6 @@
 (setq ac-ignore-case nil)
 (add-to-list 'ac-modes 'enh-ruby-mode)
 
-
 ;; TextMate Mode
 (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 (require 'textmate)
@@ -45,6 +44,7 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 
 (provide '02packages-setup)
 ;;; 02packages-setup.el ends here
