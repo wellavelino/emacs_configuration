@@ -114,7 +114,7 @@
   :type 'character
   :group 'highlight-indent-guides)
 
-(defcustom highlight-indent-guides-method 'fill
+(defcustom highlight-indent-guides-method 'character
   "Method to use when displaying indent guides.
 This can be `fill', `column', or `character'."
   :type '(choice (const fill) (const column) (const character))

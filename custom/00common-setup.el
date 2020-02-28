@@ -30,6 +30,11 @@
 (tool-bar-mode nil)
 (menu-bar-mode nil)
 
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;; (load-theme 'dracula t)
+
+;; Install missing icons
+(require 'all-the-icons)
 
 ;; Themes Configuration
 (require 'doom-themes)
@@ -40,7 +45,7 @@
 
 ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
 ;; may have their own settings.
-(load-theme 'doom-one t)
+(load-theme 'doom-tomorrow-night t)
 
 ;; Enable flashing mode-line on errors
 (doom-themes-visual-bell-config)
